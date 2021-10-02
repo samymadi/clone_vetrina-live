@@ -15,6 +15,7 @@ export default createTheme(globalTheme,{
         MuiCard:{
             styleOverrides:{
                 root: {
+                    position:'relative',
                     height:'180px',
                     minWidth:'300px',
                     width:'fit-content',
@@ -39,6 +40,9 @@ export default createTheme(globalTheme,{
    
     
 })
+
+
+
 
 
 

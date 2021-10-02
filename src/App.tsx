@@ -20,7 +20,7 @@ function App() {
           <Router>
             <Switch>
               <Route exact  path='/test'>
-                  <Card title='Visitors ' icon='eye' headerAction={<StyledLink to='/' target='_blank' title='Do you want more'/>} >
+                  <Card title='Visitors ' icon='eye' actions={<StyledLink to='/' target='_blank' title='Do you want more'/>} >
                     <Typography>
                       Some informations
                     </Typography>

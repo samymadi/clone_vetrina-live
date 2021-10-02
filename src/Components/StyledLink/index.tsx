@@ -23,9 +23,10 @@ const StyledLink = ({title,...rest}:Props):JSX.Element => {
                                 {title}
                             </Typography>
                             <Icons 
-                            iconName='rightArrow' 
+                            iconName='rightArrow'   
                             fontSize='18px' 
-                            color='#21B8F9'/>     
+                            color='#21B8F9'
+                            />     
                 </Stack>
         </Link>
     );

@@ -14,6 +14,9 @@ import theme from './style';
 
 
 
+//styles
+
+
 
 const index = (props:Props):JSX.Element => {
 
@@ -28,7 +31,7 @@ const index = (props:Props):JSX.Element => {
                         {children} 
                 </CardContent>
 
-                <CardActions>
+                <CardActions   sx={{position:'absolute',bottom:'0',paddingLeft:'0'}}>
                         {actions}
                 </CardActions>
             </Card>
@@ -43,7 +46,8 @@ export default index;
 export interface Props{
     title:string,
     icon:string,
-    headerAction:JSX.Element,
+    headerAction?:JSX.Element,
     children:JSX.Element | JSX.Element,
     actions?:JSX.Element
+    titleColor?:string
 }
