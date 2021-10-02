@@ -31,7 +31,7 @@ const index = (props:Props):JSX.Element => {
                         {children} 
                 </CardContent>
 
-                <CardActions   sx={{position:'absolute',bottom:'0',paddingLeft:'0'}}>
+                <CardActions sx={{position:'absolute',bottom:'0',paddingLeft:'0'}}>
                         {actions}
                 </CardActions>
             </Card>

@@ -18,7 +18,9 @@ const StyledLink = ({title,...rest}:Props):JSX.Element => {
                             <Typography 
                             color='info' 
                             fontFamily='Source Sans Pro' 
-                            fontWeight={400} mr='6px' 
+                            fontWeight={400} 
+                            mr='15px' 
+                            mb='5px'
                             fontSize="17px">
                                 {title}
                             </Typography>
