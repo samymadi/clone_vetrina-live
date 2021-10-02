@@ -48,10 +48,15 @@ export default createTheme(globalTheme,{
 
 
 export const typographyStyle = { 
-                            ml:"15px",
-                            color:"primary",
-                            fontSize:"20px",
-                            sx:{ fontWeight: "500"}
-                            }
+            ml:"15px",
+            color:"primary",
+            fontSize:"20px",
+            padding:'0',
+            sx:{ fontWeight: "500"}
+}
+
+export const StackStyle = {
+        sx:{padding:"0"},
+}
 
 

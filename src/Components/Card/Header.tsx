@@ -4,7 +4,7 @@ import Icon from "../Icons/index";
 
 
 //Style 
-import {typographyStyle} from './style';
+import {typographyStyle,StackStyle} from './style';
 
 const Header = (props: Props): JSX.Element => {
 
