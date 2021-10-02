@@ -1,25 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+
+import {Route,Switch,BrowserRouter as Router} from 'react-router-dom';
+
+
+
+//Test Component 
+import Card from './Components/Card/index'
+import StyledLink from './Components/StyledLink';
+
+//material ui Styles
+import globalTheme from "./Styles/GlobalTheme";
+import { ThemeProvider,Button,Typography } from "@mui/material";
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={globalTheme}>
+          <Router>
+            <Switch>
+              <Route exact  path='/test'>
+                  <Card title='Visitors ' icon='eye' headerAction={<StyledLink to='/' target='_blank' title='Do you want more'/>} >
+                    <Typography>
+                      Some informations
+                    </Typography>
+                  </Card>
+              </Route> 
+            </Switch>
+          </Router>
+    </ThemeProvider>
   );
 }
 

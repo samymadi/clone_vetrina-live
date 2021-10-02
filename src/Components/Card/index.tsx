@@ -1,0 +1,49 @@
+
+import {
+    Card,
+    CardHeader,
+    CardContent,
+    CardActions,
+    ThemeProvider,
+    Typography
+    
+} from '@mui/material';
+
+import Header from './Header';
+import theme from './style';
+
+
+
+
+const index = (props:Props):JSX.Element => {
+
+    const {children,actions,...rest} = props
+
+    return (
+        <ThemeProvider theme={theme}>
+            <Card>
+                <Header {...rest}></Header>
+
+                <CardContent>
+                        {children} 
+                </CardContent>
+
+                <CardActions>
+                        {actions}
+                </CardActions>
+            </Card>
+        </ThemeProvider>
+    );
+}
+
+export default index;
+
+
+
+export interface Props{
+    title:string,
+    icon:string,
+    headerAction:JSX.Element,
+    children:JSX.Element | JSX.Element,
+    actions?:JSX.Element
+}
