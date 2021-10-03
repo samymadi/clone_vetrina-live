@@ -3,6 +3,7 @@ import {memo} from 'react';
 // Icons
 import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import AnnouncementOutlinedIcon from '@mui/icons-material/AnnouncementOutlined';
 
 
 
@@ -21,6 +22,7 @@ const Icon = (props:Props):JSX.Element => {
     switch(iconName){
         case 'eye': return <RemoveRedEyeOutlinedIcon  color='primary' {...style}    />
         case 'rightArrow' : return <ArrowForwardIcon  color='primary' {...style} />
+        case 'news' : return <AnnouncementOutlinedIcon  color='primary' {...style} />
         default :return <></>
     }
 }

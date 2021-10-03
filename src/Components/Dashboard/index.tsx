@@ -1,11 +1,37 @@
-import React from 'react';
+import {memo} from 'react';
+import {Typography,ThemeProvider,Badge ,Button} from '@mui/material';
 
-const index = () => {
+
+
+//Components
+
+//style 
+import theme,{DashNavBar} from './style';
+import Icons from '../Icons';
+
+
+const DashboardPanel = () => {
     return (
-        <div>
-            
-        </div>
+        <ThemeProvider theme={theme}>
+            <DashNavBar>
+                <Typography
+                    color='primary'
+                    fontWeight='500'
+                    fontSize='22px'
+                    >Dashboard
+                </Typography>
+                <Badge>
+                    <Button 
+                        disableRipple
+                        startIcon={<Icons iconName='news' />}
+                        sx={{textTransform:'none','&:hover':{backgroundColor:'white'}}}
+                        >What's new !
+                    </Button>
+                </Badge>
+            </DashNavBar>
+
+        </ThemeProvider>
     );
 }
 
-export default index;
+export default memo(DashboardPanel);
