@@ -17,16 +17,19 @@ export default createTheme(globalTheme,{
 
 export const DashNavBar = styled('div')(({theme})=>({
 
-    [theme.breakpoints.up('md')]:{
-        position:'absolute',
+        position:'fixed',
+        right:'0px',
+        left:'0px',
+        width:'500px',
         display:'flex',
         flexDirection:'row',
-        top:'0',
-        left:'0',
-        right:'0',
         justifyContent:'space-between',
         alignItems:'center',
         padding:'5px 20px',
-        boxShadow:"0px 1px 1px lightgrey"
-    }
+        boxShadow:"0px 1px 1px lightgrey",
+        backgroundColor:'white',
+        height:'40px',
+        zIndex:10
+        
+    
 }))

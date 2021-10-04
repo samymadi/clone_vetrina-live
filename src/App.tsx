@@ -1,5 +1,3 @@
-
-
 import {Route,Switch,BrowserRouter as Router} from 'react-router-dom';
 
 
@@ -7,12 +5,13 @@ import {Route,Switch,BrowserRouter as Router} from 'react-router-dom';
 //Test Component 
 import Card from './Components/Card/index'
 import StyledLink from './Components/StyledLink';
-import Dashboard from './Components/Dashboard';
+import Dashboard from './Components/Panel';
 import NavigationBar from './Components/NavigationBar';
 
 //material ui Styles
 import globalTheme from "./Styles/GlobalTheme";
-import { ThemeProvider,Button,Typography } from "@mui/material";
+import { ThemeProvider,Typography } from "@mui/material";
+import Layout from './Components/Layout';
 
 
 
@@ -29,7 +28,7 @@ function App() {
                   </Card>
               </Route>
               <Route exact path='/dashboard'>
-                  <NavigationBar/>
+                  <Layout/>
               </Route>
 
               <Route exact path='/panel'>
