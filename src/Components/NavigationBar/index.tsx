@@ -1,18 +1,22 @@
 import {memo,useState} from 'react';
 
-import {Box,Tabs,Tab,Typography, ThemeProvider} from '@mui/material';
+import {Tabs,
+        Typography,
+        ThemeProvider,
+        Divider
+        } from '@mui/material';
+
 import Header from './Header';
-
-import TabItem from './TabItem';
-
-
+import ItemsContainer from './ItemsContainer';
 
 //style 
 import theme,{BoxRoot} from './style';
 
 const NavigationBar = (props:Props) => {
 
-    const {navBarWidth} = props;
+
+    const {navBarWidth} = props; //
+
     const [value, setValue] = useState<number>(0);
 
     const handleChange = async(event: React.SyntheticEvent, newValue: number) => {
@@ -36,36 +40,9 @@ const NavigationBar = (props:Props) => {
                   value={value}
                   onChange={handleChange}
                   >
-                  <TabItem iconName="home" text='Dashboard'></TabItem>
-                  <TabItem iconName="zap" text='Catalogue'></TabItem>
-                  <TabItem iconName="eye" text='Orders'></TabItem>
-                  <TabItem iconName="eye" text='Orders'></TabItem>
-                  <TabItem iconName="eye" text='Orders'></TabItem>
-                  <TabItem iconName="eye" text='Orders'></TabItem>
-                  <TabItem iconName="eye" text='Orders'></TabItem>
-                  <TabItem iconName="eye" text='Orders'></TabItem>
-                  <TabItem iconName="eye" text='Orders'></TabItem>
-                  <TabItem iconName="eye" text='Orders'></TabItem>
-                  <TabItem iconName="eye" text='Orders'></TabItem>
-                  <TabItem iconName="eye" text='Orders'></TabItem>
-                  <TabItem iconName="eye" text='Orders'></TabItem>
-                  <TabItem iconName="eye" text='Orders'></TabItem>
-                  <TabItem iconName="eye" text='Orders'></TabItem>
-                  <TabItem iconName="eye" text='Orders'></TabItem>
-                  <TabItem iconName="eye" text='Orders'></TabItem>
-                  <TabItem iconName="eye" text='Orders'></TabItem>
-                  <TabItem iconName="eye" text='Orders'></TabItem>
-                  <TabItem iconName="eye" text='Orders'></TabItem>
-                  <TabItem iconName="eye" text='Orders'></TabItem>
-                  <TabItem iconName="eye" text='Orders'></TabItem>
-                  <TabItem iconName="eye" text='Orders'></TabItem>
-                  <TabItem iconName="eye" text='Orders'></TabItem>
-                  <TabItem iconName="eye" text='Orders'></TabItem>
-                  <TabItem iconName="eye" text='Orders'></TabItem>
-                  <TabItem iconName="eye" text='Orders'></TabItem>
+                  <ItemsContainer/>    
                 
-
-                    </Tabs>
+                </Tabs>
             </BoxRoot>
         </ThemeProvider>
       )

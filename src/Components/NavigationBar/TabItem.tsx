@@ -13,7 +13,6 @@ const TabItem = (props:{iconName:string,text:string}) => {
              sx={tabStyle}
              label={ 
                         <Stack  direction='row' alignItems='center'
-                            {...props}
                             sx={stackStyle}
                             >
                                 <Icons 

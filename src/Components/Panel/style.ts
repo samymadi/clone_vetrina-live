@@ -16,11 +16,9 @@ export default createTheme(globalTheme,{
 
 
 export const DashNavBar = styled('div')(({theme})=>({
-
-        position:'fixed',
+        position:'absolute',
         right:'0px',
-        left:'0px',
-        width:'500px',
+        left:'1px',
         display:'flex',
         flexDirection:'row',
         justifyContent:'space-between',

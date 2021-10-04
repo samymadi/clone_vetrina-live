@@ -1,7 +1,14 @@
 import {useState} from 'react';
-import {Container,Stack} from '@mui/material';
+import {Container,
+        Stack} from '@mui/material';
+
 import NavigationBar from '../NavigationBar';
 import DashBoardPanel from '../Panel/index';
+
+
+import {
+        containerStackStyle,
+        stackContentStyle} from './style';
 
 
 const Layout = () => {
@@ -18,33 +25,14 @@ const Layout = () => {
         <Stack direction='row'>
             <NavigationBar 
                     handleOpenNavBar={handleOpenNavBar} 
-                    navBarWidth={navBarWidth}
-            ></NavigationBar>
-
-            <Stack  sx={{position:'absolute',transition:'left 300ms ease-in',left:navBarWidth,margin:'0',padding:'0 !important'}}>
-             <DashBoardPanel></DashBoardPanel>
-               <Stack >
-                   <h1>oke</h1>
-                   <h1>oke</h1>
-                   <h1>oke</h1>
-                   <h1>oke</h1>
-                   <h1>oke</h1>
-                   <h1>oke</h1>
-                   <h1>oke</h1>
-                   <h1>oke</h1>
-                   <h1>oke</h1>
-                   <h1>oke</h1>
-                   <h1>oke</h1>
-                   <h1>oke</h1>
-                   <h1>oke</h1>
-                   <h1>oke</h1>
-                   <h1>oke</h1>
-                   <h1>oke</h1>
-                   <h1>oke</h1>
-                   <h1>oke</h1>
-                   <h1>oke</h1>
-                   <h1>oke</h1>
-               </Stack>
+                    navBarWidth={navBarWidth} 
+            />
+            <Stack sx={{...containerStackStyle,left:navBarWidth}} >  
+                        <DashBoardPanel></DashBoardPanel>
+                        <Stack 
+                            sx={stackContentStyle}>
+                                
+                        </Stack>
             </Stack>
         </Stack>
     );
