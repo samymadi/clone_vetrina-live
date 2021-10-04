@@ -20,12 +20,12 @@ const DashboardPanel = () => {
                     fontSize='22px'
                     >Dashboard
                 </Typography>
-                <Badge>
+                <Badge badgeContent={1} color="info">
                     <Button 
                         disableRipple
-                        startIcon={<Icons iconName='news' />}
-                        sx={{textTransform:'none','&:hover':{backgroundColor:'white'}}}
-                        >What's new !
+                        startIcon={<Icons iconName='zap' />}
+                        sx={{textTransform:'none','&:hover':{backgroundColor:'white'},padding:"0 !important"}}
+                        >What's new 
                     </Button>
                 </Badge>
             </DashNavBar>

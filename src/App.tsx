@@ -32,6 +32,10 @@ function App() {
                   <NavigationBar/>
               </Route>
 
+              <Route exact path='/panel'>
+                    <Dashboard />
+              </Route>
+
             </Switch>
           </Router>
     </ThemeProvider>

@@ -1,30 +1,39 @@
-import {memo} from 'react';
+import {memo, useState,useEffect} from 'react';
+import { SvgIcon } from '@mui/material';
 
-// Icons
-import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import AnnouncementOutlinedIcon from '@mui/icons-material/AnnouncementOutlined';
-
-
+import home from '../../assets/Icon/home.svg';
+import eye from '../../assets/Icon/eye.svg'
+import rightArrow from '../../assets/Icon/arrow-right.svg';
+import zap from '../../assets/Icon/zap.svg';
+import menu from '../../assets/Icon/menu.svg';
 
 
 //Return Icons with the  icon name props
 const Icon = (props:Props):JSX.Element => {
     
     const {iconName,color,fontSize,...rest} = props;
-    const style = {
-             sx:{
-                 color:color && color,
-                 fontSize,
-                },
-            }
+    const [icon,setIcon] = useState<string>('');
 
-    switch(iconName){
-        case 'eye': return <RemoveRedEyeOutlinedIcon  color='primary' {...style}    />
-        case 'rightArrow' : return <ArrowForwardIcon  color='primary' {...style} />
-        case 'news' : return <AnnouncementOutlinedIcon  color='primary' {...style} />
-        default :return <></>
-    }
+    
+            
+    useEffect(()=>{
+        SwitchCase();
+    },[])        
+    
+
+    const SwitchCase = ()=>{
+        switch(iconName){
+             case 'eye': setIcon(eye); break;
+             case 'rightArrow' :setIcon(rightArrow); break;
+             case 'zap' : setIcon(zap); break;
+             case 'home' : setIcon(home); break;
+             case 'menu' :setIcon(menu);break;
+             default :return;
+        }
+    }        
+    
+
+        return <img src={icon} style={{height:fontSize,width:fontSize,...rest}} />  
 }
 
 export default memo(Icon);
