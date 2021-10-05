@@ -21,11 +21,19 @@ function App() {
           <Router>
             <Switch>
               <Route exact  path='/test/card'>
-                  <Card title='Visitors ' icon='eye' actions={<StyledLink to='/' target='_blank' title='Do you want more'/>} >
-                    <Typography>
-                      Some informations
-                    </Typography>
-                  </Card>
+                <div style={{display:'flex'}}>
+
+                    <Card title='Visitors ' icon='eye' actions={<StyledLink to='/' target='_blank' title='Do you want more'/>} >
+                      <Typography>
+                        Some informations
+                      </Typography>
+                    </Card>
+                    <Card title='Visitors ' icon='eye' actions={<StyledLink to='/' target='_blank' title='Do you want more'/>} >
+                      <Typography>
+                        Some informations
+                      </Typography>
+                    </Card>
+                </div>
               </Route>
               <Route exact path='/dashboard'>
                   <Layout/>

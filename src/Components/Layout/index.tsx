@@ -6,6 +6,10 @@ import NavigationBar from '../NavigationBar';
 import DashBoardPanel from '../Panel/index';
 
 
+
+//Routes
+import Dashboard from '../../Routes/Dashboard';
+
 import {
         containerStackStyle,
         stackContentStyle} from './style';
@@ -29,9 +33,9 @@ const Layout = () => {
             />
             <Stack sx={{...containerStackStyle,left:navBarWidth}} >  
                         <DashBoardPanel></DashBoardPanel>
-                        <Stack 
-                            sx={stackContentStyle}>
-                                
+
+                        <Stack sx={stackContentStyle}>
+                                 <Dashboard></Dashboard>       
                         </Stack>
             </Stack>
         </Stack>

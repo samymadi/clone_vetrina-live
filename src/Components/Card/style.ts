@@ -17,11 +17,11 @@ export default createTheme(globalTheme,{
                 root: {
                     position:'relative',
                     height:'180px',
-                    minWidth:'300px',
-                    width:'fit-content',
+                    minWidth:'250px',
                     padding:"15px",
                     borderRadius:'8px',
-                    boxShadow:'0px 4px 4px #dddddd'
+                    boxShadow:'0px 2px 9px #dddddd',
+                    margin:'0'
                   },
             }
         },
