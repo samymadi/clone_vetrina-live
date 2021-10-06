@@ -29,10 +29,9 @@ const NavigationBar = (props:Props) => {
           }}>
             
                 <Header {...props}/>
-
-                  <ItemsContainer/>    
+                <ItemsContainer/>    
                 
-            </BoxRoot>
+          </BoxRoot>
         </ThemeProvider>
       )
 }

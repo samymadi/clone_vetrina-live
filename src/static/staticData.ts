@@ -14,6 +14,7 @@ export const navBarItem:NavBarItem[] =[
     {text:'Payement Options',iconName:'dollar-sign'},
     {text:'Store Design',iconName:'brush'},
     {text:'Subscription',iconName:'credit-card'},
+    {text:'Sell on Social',iconName:'facebook'},
     {text:'integration',iconName:'Cog Planet'},
     {text:'Extension',iconName:'new app'},
     {text:'Settings',iconName:'settings'},
