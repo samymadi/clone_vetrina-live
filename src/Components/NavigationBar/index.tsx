@@ -17,11 +17,7 @@ const NavigationBar = (props:Props) => {
 
     const {navBarWidth} = props; //
 
-    const [value, setValue] = useState<number>(0);
-
-    const handleChange = async(event: React.SyntheticEvent, newValue: number) => {
-        setValue(newValue)
-    };
+    
 
   
     return (
@@ -34,15 +30,8 @@ const NavigationBar = (props:Props) => {
             
                 <Header {...props}/>
 
-                <Tabs
-                  orientation='vertical'
-                  variant="scrollable"
-                  value={value}
-                  onChange={handleChange}
-                  >
                   <ItemsContainer/>    
                 
-                </Tabs>
             </BoxRoot>
         </ThemeProvider>
       )

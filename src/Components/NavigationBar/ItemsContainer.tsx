@@ -1,6 +1,8 @@
+import { useState } from 'react';
+
 
 import TabItem from './TabItem';
-import { Divider } from '@mui/material';
+import { Divider,Tabs } from '@mui/material';
 //static Data
 import { navBarItem,navBarItem2,NavBarItem } from '../../static/staticData';
 
@@ -9,6 +11,15 @@ import { navBarItem,navBarItem2,NavBarItem } from '../../static/staticData';
 
 
 const ItemsContainer = (props:any) => {
+
+
+
+
+  const [value, setValue] = useState<number>(0);
+
+  const handleChange = async(event: React.SyntheticEvent, newValue: number) => {
+      setValue(newValue)
+  };
 
 
     const renderItem = (array :NavBarItem[])=>{
@@ -22,11 +33,17 @@ const ItemsContainer = (props:any) => {
           
         }
     return (
-        <>
-          {renderItem(navBarItem)}
-            <Divider sx={{margin:'10px 0px'}}/>
-          {renderItem(navBarItem2)}
-        </>
+              <Tabs
+                  orientation='vertical'
+                  variant="scrollable"
+                  value={value}
+                  onChange={handleChange}
+                  >
+                    
+                    {renderItem(navBarItem)}
+                      <Divider sx={{margin:'10px 0px'}}/>
+                    {renderItem(navBarItem2)}
+              </Tabs>
     );
 }
 
