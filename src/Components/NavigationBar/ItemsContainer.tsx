@@ -41,7 +41,7 @@ const ItemsContainer = (props:any) => {
                   >
                     
                     {renderItem(navBarItem)}
-                      <Divider sx={{margin:'10px 0px'}}/>
+                      <Divider  sx={{margin:'10px 0px'}}/>
                     {renderItem(navBarItem2)}
               </Tabs>
     );

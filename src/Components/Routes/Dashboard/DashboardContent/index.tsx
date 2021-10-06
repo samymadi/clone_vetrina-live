@@ -14,7 +14,7 @@ const DashBoardContent = () => {
                 <Grid 
                     container 
                     spacing={2} 
-                    sx={{padding:'10px 4% 30px 4%',backgroundColor:'#f7f7f7'}} >
+                    sx={{padding:'10px 5% 30px 5%',backgroundColor:'#f7f7f7'}} >
                         <GridContainer
                                 rootGrid={{ xs: 12, md: 8, sm: 12 }} 
                                 childrenGrid={{xs: 12, md: 6, sm: 12}} 

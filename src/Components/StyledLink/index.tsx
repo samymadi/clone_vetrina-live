@@ -4,16 +4,20 @@ import { Stack, Typography } from '@mui/material';
 import Icons from '../Icons';
 
 
+//style 
+import { linkStyle,stackStyle } from './style';
+
+
 const StyledLink = ({title,...rest}:Props):JSX.Element => {
 
     return (
         <Link 
         {...rest} 
-        style={{textDecorationColor:'#21B8F9'}} >   
+        style={linkStyle} >   
                 <Stack 
                 direction='row' 
                 alignItems='center' 
-                sx={{color:'#21B8F9'}}> 
+                sx={stackStyle}> 
 
                             <Typography 
                             color='info' 

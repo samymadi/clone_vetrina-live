@@ -34,7 +34,7 @@ const Layout = () => {
             <Stack sx={{...containerStackStyle,left:navBarWidth}} >  
                         <DashBoardPanel></DashBoardPanel>
 
-                        <Stack sx={stackContentStyle}>
+                        <Stack  sx={{...stackContentStyle}}>
                                  <Dashboard></Dashboard>       
                         </Stack>
             </Stack>

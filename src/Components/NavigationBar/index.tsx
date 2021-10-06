@@ -10,7 +10,7 @@ import Header from './Header';
 import ItemsContainer from './ItemsContainer';
 
 //style 
-import theme,{BoxRoot} from './style';
+import theme,{BoxRoot,setRootStyle} from './style';
 
 const NavigationBar = (props:Props) => {
 
@@ -24,9 +24,7 @@ const NavigationBar = (props:Props) => {
 
       <ThemeProvider theme={theme}>
 
-          <BoxRoot sx={{ width:navBarWidth,
-          '.Mui-selected':{backgroundColor:'#F7F7F7',borderRadius:'3px','& p':{color:'#21B8F9'}}
-          }}>
+          <BoxRoot sx={setRootStyle(navBarWidth)}>
             
                 <Header {...props}/>
                 <ItemsContainer/>    
