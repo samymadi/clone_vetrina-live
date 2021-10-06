@@ -1,10 +1,16 @@
-import {createTheme,styled} from '@mui/material';
+import {createTheme,styled, Theme} from '@mui/material';
+import { SystemStyleObject } from '@mui/system';
 import globalTheme from '../../Styles/GlobalTheme';
 
 
 
-
-
+export const buttonStyle:SystemStyleObject<Theme>={
+        textTransform:'none',
+        '&:hover':{
+                        backgroundColor:'white'
+                  },
+        padding:"0 !important"
+}       
 
 
 

@@ -16,12 +16,12 @@ export default createTheme(globalTheme,{
             styleOverrides:{
                 root: {
                     position:'relative',
-                    height:'180px',
+                    minHeight:'180px',
                     minWidth:'250px',
                     padding:"15px",
                     borderRadius:'8px',
                     boxShadow:'0px 4px 6px #dfdfdf',
-                    margin:'0'
+                    margin:'0',
                   },
             }
         },
@@ -29,7 +29,18 @@ export default createTheme(globalTheme,{
             styleOverrides:{
                     root:{
                         padding:'0',
-                        marginTop:'10px'
+                        marginTop:'10px',
+                        marginBottom:'30px'
+                    }
+            }
+            
+        },
+        MuiCardActions:{
+            styleOverrides:{
+                    root:{
+                        position:'absolute',
+                        bottom:'0',
+                        paddingLeft:'0'
                     }
             }
             

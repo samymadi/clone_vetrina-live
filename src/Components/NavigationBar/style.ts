@@ -50,6 +50,11 @@ export default createTheme(globalTheme,{
 
 
 
+export const setRootStyle =(navBarWidth:string)=>{
+    return { width:navBarWidth,
+        '.Mui-selected':{backgroundColor:'#F7F7F7',borderRadius:'3px','& p':{color:'#21B8F9'}}
+        }
+} 
 
 
 

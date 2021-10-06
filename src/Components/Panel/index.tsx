@@ -6,7 +6,7 @@ import {Typography,ThemeProvider,Badge ,Button} from '@mui/material';
 //Components
 
 //style 
-import theme,{DashNavBar} from './style';
+import theme,{DashNavBar,buttonStyle} from './style';
 import Icons from '../Icons';
 
 
@@ -24,7 +24,7 @@ const DashboardPanel = () => {
                     <Button 
                         disableRipple
                         startIcon={<Icons iconName='zap' />}
-                        sx={{textTransform:'none','&:hover':{backgroundColor:'white'},padding:"0 !important"}}
+                        sx={buttonStyle}
                         >What's new 
                     </Button>
                 </Badge>

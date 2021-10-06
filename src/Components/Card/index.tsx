@@ -25,13 +25,15 @@ const index = (props:Props):JSX.Element => {
     return (
         <ThemeProvider theme={theme}>
             <Card>
-                <Header {...rest}></Header>
+                <Header {...rest}>
+                    
+                </Header>
 
                 <CardContent>
                         {children} 
                 </CardContent>
 
-                <CardActions sx={{position:'absolute',bottom:'0',paddingLeft:'0'}}>
+                <CardActions>
                         {actions}
                 </CardActions>
             </Card>
