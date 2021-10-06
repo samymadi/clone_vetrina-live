@@ -21,7 +21,8 @@ import logOut from '../../assets/Icon/log-out.svg';
 import code from '../../assets/Icon/code.svg';
 import helpCircle from '../../assets/Icon/help-circle.svg';
 import share2 from '../../assets/Icon/share-2.svg';
-
+import tool from '../../assets/Icon/tool.svg';
+import facebook from '../../assets/Icon/facebook.svg'
 
 
 //Return Icons with the  icon name props
@@ -58,6 +59,8 @@ const Icon = (props:Props):JSX.Element => {
              case 'log-out' :setIcon(logOut);break;
              case 'help-circle' :setIcon(helpCircle);break;
              case 'share-2' :setIcon( share2);break;
+             case 'tool': setIcon(tool); break;
+             case 'facebook': setIcon(facebook); break;
              default :return;
         }
     }        

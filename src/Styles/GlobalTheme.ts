@@ -1,5 +1,4 @@
 import { createTheme } from "@mui/material";
-import { light } from "@mui/material/styles/createPalette";
 
 
 
@@ -17,7 +16,7 @@ const globalTheme = createTheme({
         }
     },
     typography:{
-        fontFamily:'NotoHK',
+        fontFamily:'Noto Sans HK',
     },
 
 

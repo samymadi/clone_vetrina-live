@@ -20,27 +20,10 @@ function App() {
     <ThemeProvider theme={globalTheme}>
           <Router>
             <Switch>
-              <Route exact  path='/test/card'>
-                <div style={{display:'flex'}}>
-
-                    <Card title='Visitors ' icon='eye' actions={<StyledLink to='/' target='_blank' title='Do you want more'/>} >
-                      <Typography>
-                        Some informations
-                      </Typography>
-                    </Card>
-                    <Card title='Visitors ' icon='eye' actions={<StyledLink to='/' target='_blank' title='Do you want more'/>} >
-                      <Typography>
-                        Some informations
-                      </Typography>
-                    </Card>
-                </div>
-              </Route>
+              <Route exact  path='/test/card' />
+               
               <Route exact path='/dashboard'>
                   <Layout/>
-              </Route>
-
-              <Route exact path='/panel'>
-                    <Dashboard />
               </Route>
 
             </Switch>
