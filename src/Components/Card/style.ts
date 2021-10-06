@@ -20,7 +20,7 @@ export default createTheme(globalTheme,{
                     minWidth:'250px',
                     padding:"15px",
                     borderRadius:'8px',
-                    boxShadow:'0px 2px 9px #dddddd',
+                    boxShadow:'0px 4px 6px #dfdfdf',
                     margin:'0'
                   },
             }

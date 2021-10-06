@@ -1,65 +1,28 @@
 
-import { Grid,Stack } from "@mui/material";
-import { height } from "@mui/system";
+import { Grid} from "@mui/material";
 import Card from '../../../Card/index';
+
+import GridContainer from './GridContainer';
 
 const DashBoardContent = () => {
     return (
-                <Grid container spacing={2} sx={{padding:'10px 80px 30px 80px',backgroundColor:'#f7f7f7'}} >
-                    <Grid item md={8} sm={12} sx={{marginTop:'-50px'}}>   
-                            <Grid container spacing={2} >
-                                    <Grid item md={6} sm={12} >
-                                        <Card title='News' icon='settings' children={<p>code info</p>}  />
-                                    </Grid> 
-                                    <Grid item md={6} sm={12} >
-                                        <Card title='News' icon='settings' children={<p>code info</p>}  />
-                                    </Grid> 
-                                    <Grid item md={12} sm={12} >
-                                        <Card title='News' icon='settings' children={<p>code info</p>}  />
-                                    </Grid> 
-                                    <Grid item md={6} sm={12} >
-                                        <Card title='News' icon='settings' children={<p>code info</p>}  />
-                                    </Grid> 
-                                    <Grid item md={6} sm={12} >
-                                        <Card title='News' icon='settings' children={<p>code info</p>}  />
-                                    </Grid> 
-                            </Grid>
-                    </Grid>
+                <Grid container spacing={2} sx={{padding:'10px 4% 30px 4%',backgroundColor:'#f7f7f7'}} >
+                    <GridContainer
+                            rootGrid={{ xs: 12, md: 8, sm: 12 }} 
+                            childrenGrid={{xs: 12, md: 6, sm: 12}} 
+                            spacing={2}>
+                                 <Card title='News' icon='settings' children={<p>code info</p>}  />
+                                 <Card title='News' icon='settings' children={<p>code info</p>}  />
 
-                    <Grid item md={4} sm={12} sx={{marginTop:'-50px'}}>
-                            <Grid container spacing={2}>
-                                        <Grid item md={12} sm={12}>
-                                            <Card title='News' icon='settings' children={<p>code info</p>}  />
-                                        </Grid>
-                                        <Grid item md={12} sm={12}>
-                                            <Card title='News' icon='settings' children={<p>code info</p>}  />
-                                        </Grid>
-                                        <Grid item md={12} sm={12}>
-                                            <Card title='News' icon='settings' children={<p>code info</p>}  />
-                                        </Grid>
-                            </Grid>
-                    </Grid>
-                    
-                    
-                    {/* <Grid item md={4} sm={12} >
-                        <Card title='News' icon='eye' children={<p>code info</p>}  />
-                    </Grid>
-                    <Grid item md={4} sm={12} sx={{marginTop:'-50px'}}>
-                        <Card title='News' icon='settings' children={<p>code info</p>}  />
-                    </Grid>
-                    <Grid item md={4} sm={12} sx={{marginTop:'-50px',backgroundColor:'lightgrey'}} >
-                       <Grid container direction='column' spacing={2}>
-                            <Grid item md={12} sm={12} >
-                                <Card title='News' icon='code' children={<p>code info</p>}  />
-                            </Grid>
-                            <Grid item md={12} sm={12} >
-                                <Card title='News' icon='code' children={<p>code info</p>}  />
-                            </Grid>
-                        </Grid>     
-                    </Grid>
-                    <Grid item md={8} sm={12} sx={{backgroundColor:'lightcoral'}} >
-                        <Card title='News' icon='code' children={<p>code info</p>}  />
-                    </Grid> */}
+                    </GridContainer>
+                    <GridContainer 
+                            rootGrid={{ xs: 12, md: 4, sm: 12 }} 
+                            childrenGrid={{xs: 12, md: 12, sm: 12}} 
+                            spacing={2}>
+                                 <Card title='News' icon='settings' children={<p>code info</p>}  />
+                                 <Card title='News' icon='settings' children={<p>code info</p>}  />
+                                 <Card title='News' icon='settings' children={<p style={{height:'300px',backgroundColor:'red'}}>code info</p>}  />
+                    </GridContainer>
                 </Grid>
     );
 }
