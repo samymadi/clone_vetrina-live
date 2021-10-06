@@ -18,10 +18,9 @@ export const containerStackStyle:SystemStyleObject<Theme> ={
 }
 
 export const stackContentStyle :SystemStyleObject<Theme>  = {
-    bottom:'0',
-    padding:"5px 10px",
-    overflowY:'scroll',
     position:'absolute',
+    bottom:'0',
+    overflowY:'scroll',
     top:'45px',
     left:'0',
     right:'0',

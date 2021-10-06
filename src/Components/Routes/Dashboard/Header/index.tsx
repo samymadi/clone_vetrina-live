@@ -1,12 +1,12 @@
+import { Root } from "./style";
 
-const index = () => {
+
+const Header = () => {
     return (
-        <div>
-            
-        </div>
+        <Root/>
     );
 }
 
-export default index;
+export default Header;
 
 export {};
