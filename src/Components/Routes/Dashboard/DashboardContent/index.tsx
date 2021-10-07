@@ -21,6 +21,8 @@ const DashBoardContent = () => {
                                 spacing={2}>
                                     <Visitors/>   
                                     <Orders/>   
+                                    {/* <Card title='News' icon='settings' children={<p>code info</p>}  /> */}
+
                                     
 
                         </GridContainer>
@@ -30,8 +32,6 @@ const DashBoardContent = () => {
                                 spacing={2}>
                                     <ConfigShop/>   
                                     <Card title='News' icon='settings' children={<p>code info</p>}  />
-                                    <Card title='News' icon='settings' children={<p>code info</p>}  />
-                                    <Card title='News' icon='settings' children={<p style={{height:'300px',backgroundColor:'red'}}>code info</p>}  />
                         </GridContainer>
                 </Grid>
     );

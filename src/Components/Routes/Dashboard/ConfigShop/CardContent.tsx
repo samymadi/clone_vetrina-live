@@ -9,7 +9,7 @@ import CompletedProgress from './CompletedProgress';
 const CardContent = () => {
     return (
         <Stack >
-                <CompletedProgress percentage={100} />
+                <CompletedProgress percentage={45} />
                 <Typography 
                         paragraph 
                         fontSize='15px' 

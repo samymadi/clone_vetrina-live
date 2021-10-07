@@ -59,7 +59,7 @@ export const setRootStyle =(navBarWidth:string)=>{
 
 
 const scrollBarStyle = {
-    '::-webkit-scrollbar':{width:'4px'},
+    '::-webkit-scrollbar':{width:'2px'},
     '::-webkit-scrollbar-thumb':{backgroundColor:'#999999',borderRadius:'8px'}
 }
 

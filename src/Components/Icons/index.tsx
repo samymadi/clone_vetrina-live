@@ -28,7 +28,7 @@ import facebook from '../../assets/Icon/facebook.svg'
 //Return Icons with the  icon name props
 const Icon = (props:Props):JSX.Element => {
     
-    const {iconName,...rest} = props;
+    const {iconName,fontSize,...rest} = props;
     const [icon,setIcon] = useState<string>('');
 
     
@@ -66,7 +66,7 @@ const Icon = (props:Props):JSX.Element => {
     }        
     
 
-        return <img src={icon} style={rest} />  
+        return <img src={icon} style={{...rest,width:fontSize}} />  
 }
 
 export default memo(Icon);
