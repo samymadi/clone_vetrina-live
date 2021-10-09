@@ -1,10 +1,10 @@
 import { Stack, Typography } from "@mui/material";
 //icon 
-import Icon from "../Icons/index";
+import Icon from "../../Icons/index";
 
 
 //Style 
-import {typographyStyle,StackStyle} from './style';
+import {typographyStyle} from './style';
 
 const Header = (props: Props): JSX.Element => {
 

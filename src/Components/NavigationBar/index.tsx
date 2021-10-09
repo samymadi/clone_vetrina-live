@@ -1,46 +1,36 @@
-import {memo,useState} from 'react';
+import { Drawer,ThemeProvider, } from "@mui/material";
+import { useState } from "react";
+import Header from "./Header";
+import ItemsContainer from "./ItemsContainer";
 
-import {Tabs,
-        Typography,
-        ThemeProvider,
-        Divider
-        } from '@mui/material';
 
-import Header from './Header';
-import ItemsContainer from './ItemsContainer';
+//Components
+import theme,{ContainerRoot} from "./style";
+
+
 
 //style 
-import theme,{BoxRoot,setRootStyle} from './style';
-
-const NavigationBar = (props:Props) => {
+import {styledDrawer} from './style';
 
 
-    const {navBarWidth} = props; //
 
-    
+const NavigationBar = () => {
 
-  
+    const [drawewIsOpen,setDrawerIsOpen] = useState<boolean>(false);
     return (
-
-      <ThemeProvider theme={theme}>
-
-          <BoxRoot sx={setRootStyle(navBarWidth)}>
-            
-                <Header {...props}/>
-                <ItemsContainer/>    
-                
-          </BoxRoot>
-        </ThemeProvider>
-      )
+        <ThemeProvider theme={theme}>
+                        <Drawer
+                            sx={styledDrawer(drawewIsOpen ? '200px' : "45px")}
+                            variant="permanent"
+                            anchor="left">
+                                <ContainerRoot>
+                                    <Header setDrawerIsOpen={setDrawerIsOpen} />
+                                    <ItemsContainer/>    
+                                </ContainerRoot>
+                            
+                        </Drawer>
+        </ThemeProvider>  
+    );
 }
 
-export default memo(NavigationBar);
-
-
-
-interface Props{
-  handleOpenNavBar: ()=>void,
-  navBarWidth:string
-}
-
-
+export default NavigationBar;

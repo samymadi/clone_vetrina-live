@@ -1,6 +1,6 @@
 
 //Component
-import StyledLink from "../../../StyledLink";
+import StyledLink from "../../../components/reusable/StyledLink";
 
 const Actions = () =><StyledLink 
                             title='Do you want more visits? Contact us !' 

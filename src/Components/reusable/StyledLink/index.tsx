@@ -1,7 +1,7 @@
 
 import {Link} from 'react-router-dom'
 import { Stack, Typography } from '@mui/material';
-import Icons from '../Icons';
+import Icons from '../../Icons';
 
 
 //style 

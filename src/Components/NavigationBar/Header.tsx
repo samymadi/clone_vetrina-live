@@ -4,11 +4,11 @@ import Icons from "../Icons";
 import Logo from '../../assets/Logo/logo.svg';
 
 
-const Header = ({handleOpenNavBar}:Props) => {
+const Header = ({setDrawerIsOpen}:Props) => {
 
 
     const handleClick = ()=>{
-        handleOpenNavBar();
+        setDrawerIsOpen(prev=>!prev);
     }
 
 
@@ -39,5 +39,5 @@ export default Header;
 
 
 interface Props{
-        handleOpenNavBar:()=>void
+    setDrawerIsOpen:React.Dispatch<React.SetStateAction<boolean>>
 }

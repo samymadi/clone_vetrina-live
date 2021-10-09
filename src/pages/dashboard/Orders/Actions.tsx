@@ -1,5 +1,5 @@
 import {memo} from 'react';
-import StyledLink from '../../../StyledLink';
+import StyledLink from '../../../components/reusable/StyledLink';
 
 //Component 
 const Actions = () => {

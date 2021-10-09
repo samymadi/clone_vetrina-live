@@ -2,7 +2,7 @@
 import { Grid} from "@mui/material";
 
 //component 
-import Card from '../../../Card/index';
+import Card from '../../../components/reusable/Card/index';
 import GridContainer from './GridContainer';
 import Visitors from "../Visitors";
 import Orders from "../Orders";

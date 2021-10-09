@@ -1,33 +1,15 @@
-import {Route,Switch,BrowserRouter as Router} from 'react-router-dom';
-
-
-
-//Test Component 
-import Card from './Components/Card/index'
-import StyledLink from './Components/StyledLink';
-import Dashboard from './Components/Panel';
-import NavigationBar from './Components/NavigationBar';
-
 //material ui Styles
 import globalTheme from "./Styles/GlobalTheme";
-import { ThemeProvider,Typography } from "@mui/material";
-import Layout from './Components/Layout';
+import { ThemeProvider } from "@mui/material";
+
+import Layout from './navigation/NavigationLayout';
 
 
 
 function App() {
   return (
     <ThemeProvider theme={globalTheme}>
-          <Router>
-            <Switch>
-              <Route exact  path='/test/card' />
-               
-              <Route exact path='/dashboard'>
-                  <Layout/>
-              </Route>
-
-            </Switch>
-          </Router>
+          <Layout></Layout>
     </ThemeProvider>
   );
 }
