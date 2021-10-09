@@ -1,6 +1,6 @@
 import { styled,Grid } from "@mui/material";
 
-import globalTheme from "../../../../Styles/GlobalTheme";
+import globalTheme from "../../../Styles/GlobalTheme";
 
 
 

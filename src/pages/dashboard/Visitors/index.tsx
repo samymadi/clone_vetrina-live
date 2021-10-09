@@ -2,7 +2,7 @@
 import {memo} from 'react'
 
 //Components
-import Card from '../../../Card/index';
+import Card from '../../../components/reusable/Card/index';
 import Actions from './Actions';
 import CardContent from './CardContent';
 

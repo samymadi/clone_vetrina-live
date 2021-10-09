@@ -1,5 +1,15 @@
-import {styled,createTheme, Stack} from '@mui/material'
-import globalTheme from '../../Styles/GlobalTheme'
+//Types
+import { SxProps, Theme, styled } from "@mui/system"
+import { createTheme } from "@mui/material"
+import globalTheme from "src/Styles/GlobalTheme"
+
+
+
+const scrollBarStyle = {
+    '::-webkit-scrollbar':{width:'2px',display:'none'},
+    '::-webkit-scrollbar-thumb':{backgroundColor:'#999999',borderRadius:'8px'}
+}
+
 
 
 
@@ -50,54 +60,50 @@ export default createTheme(globalTheme,{
 
 
 
+
+
+
+
+export const  styledDrawer = (width:string):SxProps<Theme>=>{
+    
+    
+    return { 
+             position:'relative',
+             transition:'width 300ms ease-in',
+             width,
+             flexShrink: 0,
+             '& .MuiDrawer-paper': {
+                width,
+                boxSizing: 'border-box',
+                backgroundColor:'transparent',
+                transition:'inherit',
+             }
+    }
+}
+
+
+
+
+export const ContainerRoot = styled('div')(()=>({
+ 
+    height:'100%',
+    overflowY:'scroll',
+    overflowX:'hidden',
+    '.Mui-selected':{backgroundColor:'#f2f2f2',borderRadius:'3px','& p':{color:'#21B8F9'}},
+
+    
+    ...scrollBarStyle,
+}))   
+
+
+
+
 export const setRootStyle =(navBarWidth:string)=>{
     return { width:navBarWidth,
         '.Mui-selected':{backgroundColor:'#F7F7F7',borderRadius:'3px','& p':{color:'#21B8F9'}}
         }
 } 
 
-
-
-const scrollBarStyle = {
-    '::-webkit-scrollbar':{width:'2px'},
-    '::-webkit-scrollbar-thumb':{backgroundColor:'#999999',borderRadius:'8px'}
-}
-
-
-export const BoxRoot = styled('div')(({theme})=>({
-    position:'fixed',
-    top:'0',
-    bottom:'0',
-    left:'0',
-    height:'100%',
-    overflowY:'scroll',
-    overflowX:'hidden',
-    borderRight:'1px solid lightgrey',
-    transition:'width 300ms ease-in',
-    ...scrollBarStyle,
-    [theme.breakpoints.up('md')]: {
-        
-      },
-}))   
-
-
-
-// export const BoxStyle (width:string)=>({})
-
-
-
-// export const StackRoot = styled((props:StyledStackProps)=> <Stack {...props} />)(({theme})=>({
-
-// }))
-
-
-
-
-
-
-
-
-//Item Styles-------------------------------------------------------------------------
 
 export const tabStyle = {
     padding:'5px 0',
@@ -120,6 +126,3 @@ export const typographyStyle={
     marginLeft:'10px',
     fontSize:'14px'    
 }
-
-
-

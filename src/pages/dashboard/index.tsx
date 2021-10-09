@@ -1,9 +1,10 @@
 import { Stack } from "@mui/material";
+import {ReactComponent as Icon} from '../../assets/Icon/github.svg'
 
 
 //Component 
-import Header  from "../Components/Routes/Dashboard/Header/index";
-import DashboardContent from "../Components/Routes/Dashboard/DashboardContent";
+import Header  from "./Header/index";
+import DashboardContent from "./DashboardContent";
 
 const Dashboard = () => {
     return (

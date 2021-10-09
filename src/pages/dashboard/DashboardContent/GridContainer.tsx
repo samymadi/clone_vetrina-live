@@ -1,7 +1,6 @@
 import {memo} from 'react';
 
-import {Grid, GridTypeMap} from '@mui/material';
-import Card from '../../../Card/index';
+import {Grid} from '@mui/material';
 
 
 

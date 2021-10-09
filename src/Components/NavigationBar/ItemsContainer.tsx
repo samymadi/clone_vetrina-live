@@ -4,7 +4,7 @@ import { useState } from 'react';
 import TabItem from './TabItem';
 import { Divider,Tabs } from '@mui/material';
 //static Data
-import { navBarItem,navBarItem2,NavBarItem } from '../../static/staticData';
+import { navBarItem,navBarItem2,NavBarItem } from '../../assets/static/staticData';
 
 
 
