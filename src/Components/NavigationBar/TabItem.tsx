@@ -1,4 +1,5 @@
 import {Stack,Typography,Tab} from '@mui/material';
+import { Link } from 'react-router-dom';
 import Icons from '../Icons';
 
 
@@ -11,24 +12,36 @@ const TabItem = (props:{iconName:string,text:string}) => {
     return (
         <Tab {...props} 
              sx={tabStyle}
-             label={ 
-                        <Stack  direction='row' alignItems='center'
-                            sx={stackStyle}
-                            >
-                                <Icons 
-                                        iconName={iconName} 
-                                        fontSize='18px'/>
-                                <Typography 
-                                            color='primary' 
-                                            sx={{...typographyStyle,textTransform:'none'}}  
-                                >
-                                        {text}
-                                </Typography>
-
-                        </Stack>} 
+             label={ <ReturnJSX {...props}/>
+             }  
              />
 
     );
 }
 
 export default TabItem;
+
+
+
+
+const ReturnJSX = (props:any)=>{
+    return (
+        <Link to={`/${props.text}`} style={{textDecoration:'none',width:'100%'}} >
+        <Stack  direction='row' alignItems='center'
+                sx={stackStyle}
+                >
+                    <Icons 
+                            iconName={props.iconName} 
+                            fontSize='18px'/>
+                    <Typography 
+                                color='primary' 
+                                sx={{...typographyStyle,textTransform:'none'}}  
+                                >
+                            {props.text}
+                    </Typography>
+
+            </Stack>
+        </Link> 
+ 
+    )
+}

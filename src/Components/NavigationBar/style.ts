@@ -72,11 +72,13 @@ export const  styledDrawer = (width:string):SxProps<Theme>=>{
              transition:'width 300ms ease-in',
              width,
              flexShrink: 0,
+             
              '& .MuiDrawer-paper': {
                 width,
                 boxSizing: 'border-box',
                 backgroundColor:'transparent',
                 transition:'inherit',
+                paddingRight:'3px'
              }
     }
 }
@@ -117,12 +119,11 @@ export const stackStyle = {
     height:"20px",
     width:'100%',
     borderLeft:'3px solid transparent',
-    marginLeft:'10px',
     paddingLeft:'5px'
 }
 
 
 export const typographyStyle={
-    marginLeft:'10px',
+    marginLeft:'15px',
     fontSize:'14px'    
 }
