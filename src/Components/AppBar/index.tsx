@@ -3,7 +3,7 @@ import { AppBar as AppB,Button,Typography,Toolbar,Badge} from "@mui/material";
 
 const AppBar = () => {
     return (
-                    <AppB position="static" sx={{boxShadow:'0px 1px 4px lightgrey'}} >
+                    <AppB position="static" sx={{boxShadow:'none',borderBottom:'1px solid lightgrey'}} >
                         <Toolbar sx={{display:'flex',justifyContent:'space-between',alignItems:'center',backgroundColor:'white',minHeight:'64px !important'}}>
                               <>
                                 <Typography

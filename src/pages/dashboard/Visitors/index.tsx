@@ -5,13 +5,15 @@ import {memo} from 'react'
 import Card from '../../../components/reusable/Card/index';
 import Actions from './Actions';
 import CardContent from './CardContent';
+import StyledSelect from 'src/components/reusable/StyledSelect';
 
 
 const Visitors = () => {
     return (
         <Card 
             icon='eye' 
-            title='Visitors' 
+            title='Visitors'
+            headerAction={<StyledSelect/>} 
             actions={<Actions/>}>
                 
                 <CardContent/>

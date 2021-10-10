@@ -2,14 +2,31 @@
 export interface NavBarItem{
     text:string,
     iconName:string
+    extend?:boolean
+    subItems?:string[]
 }
 
 export const navBarItem:NavBarItem[] =[
     {text:'Dashboard',iconName:'home'},
-    {text:'Catalogue',iconName:'shopping-cart'},
+    {text:'Catalogue',iconName:'shopping-cart',extend:true,subItems:[
+        'Discount codes',
+        'Exit intent',
+        'Checkout Features',
+        'Cart abandonment',
+        'Timer checkout',
+        'Sell on Social',
+        'Special Offer',
+        'Seasonal Offer',
+
+    ]},
     {text:'Orders',iconName:'list'},
     {text:'Customer',iconName:'user'},
-    {text:'Marketing',iconName:'target'},
+    {text:'Marketing',iconName:'target',extend:true,subItems:[
+        
+        'Special Offer',
+        'Seasonal Offer',
+
+    ]},
     {text:'Delivery Options',iconName:'truck'},
     {text:'Payement Options',iconName:'dollar-sign'},
     {text:'Store Design',iconName:'brush'},

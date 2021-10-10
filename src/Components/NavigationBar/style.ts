@@ -1,6 +1,6 @@
 //Types
 import { SxProps, Theme, styled } from "@mui/system"
-import { createTheme } from "@mui/material"
+import { createTheme,TextField } from "@mui/material"
 import globalTheme from "src/Styles/GlobalTheme"
 
 
@@ -24,7 +24,7 @@ export default createTheme(globalTheme,{
                     width:'3px',
                     left:'0 !important',
                     backgroundColor:'#21B8F9',
-                    borderRadius:'8px'
+                    borderRadius:'8px',
                 },
                 root:{
                     minWidth:'fit-content',
@@ -45,13 +45,6 @@ export default createTheme(globalTheme,{
 
                         }
                     },
-                    'Mui-selected':{
-                        backgroundColor:'#F7F7F7',
-                        borderRadius:'3px',
-                        color:'red',
-                        fontSize:'30px'
-                    }
-                 
             }
         }
     }
@@ -114,6 +107,20 @@ export const tabStyle = {
 }
 
 
+
+
+
+
+
+//---------------------------------SelectedItem--------------------------
+
+export const linkStyle= {
+    textDecoration:'none',
+    width:'100%',
+}
+
+
+
 export const stackStyle = {
     minHeight:"20px",
     height:"20px",
@@ -123,7 +130,66 @@ export const stackStyle = {
 }
 
 
-export const typographyStyle={
+export const typographyStyle:SxProps<Theme>={
     marginLeft:'15px',
-    fontSize:'14px'    
+    fontSize:'14px',
+    textTransform:'none'
 }
+
+
+
+// --------------------------------ExtendItem-----------------------------
+
+export const accordionDetailsStyle={
+    backgroundColor:'#E9F8FE',
+    padding:'0'
+}        
+
+export const accordionSummaryStyle={
+            minHeight:'32px !important',
+            height:'32px',
+            padding:'0',
+            maxHeight:'32px'
+}
+export const accordionStyle={
+            boxShadow:'none',
+            width:'100%'
+}
+
+
+export const  listStyle={
+    backgroundColor:'#E9F8FE'
+}
+
+
+
+// -------------------------------SubTitles-----------------------------
+
+
+
+export const linkStyleSubTitles= {
+    textDecoration:'none',
+    color:'unset'
+}
+
+export const listItemStyle = {
+    padding:'6px 16px',
+    paddingLeft:'40px'
+}
+
+export const  typoSubTitleStyle:SxProps<Theme>= {
+    fontSize:"13px !important",
+    textTransform:'none'
+}
+
+
+
+//----------------------------------Footer---------------------------------
+
+
+
+export const typoDateStyle = {
+    width:'80%',
+    margin:'50px auto 25px auto'
+}
+
