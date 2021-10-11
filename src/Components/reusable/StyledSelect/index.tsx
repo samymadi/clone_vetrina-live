@@ -1,27 +1,49 @@
 import {memo} from 'react';
 
 //material ui 
-import {Select,MenuItem} from '@mui/material'
+import {MenuItem,ThemeProvider} from '@mui/material'
 
 
 
 //style
-import { StyledSelect } from './style';
+import theme,{ StyledSelect } from './style';
 
-const index = () => {
+const index = (props:Props) => {
+
+    const {values,value,setValue} = props;
+
+
+
+    const handleChange = (event:any)=>{
+        setValue(event.target.value);
+    }
+
+
     return (
-        <StyledSelect
-            labelId="demo-simple-select-label"
-            id="demo-simple-select"
-            label="Age"
-            value={10}
-           
-        >
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
-        </StyledSelect>
+
+      <ThemeProvider theme={theme}>
+
+                    <StyledSelect
+                        onChange={handleChange}
+                        value={value}
+                        >   
+                        {values.map((element:string,index:number)=>
+                            (<MenuItem value={index} key={index}>
+                                {element}
+                            </MenuItem>
+                            )
+                            )}
+                    </StyledSelect>
+       </ThemeProvider>  
     );
 }
 
 export default memo(index);
+
+
+
+interface Props {
+    values:string[]
+    value:number
+    setValue:React.Dispatch<React.SetStateAction<number>>
+}
