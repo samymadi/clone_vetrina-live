@@ -1,10 +1,11 @@
 import { useState } from 'react';
 
 
-import TabItem from './TabItem';
-import { Divider,Tabs } from '@mui/material';
+import RootTab from './RootTab';
+import { Divider,Tabs,Tab,Accordion,AccordionSummary,AccordionDetails,CssBaseline ,Typography} from '@mui/material';
 //static Data
 import { navBarItem,navBarItem2,NavBarItem } from '../../assets/static/staticData';
+import Icons from '../Icons';
 
 
 
@@ -18,16 +19,16 @@ const ItemsContainer = (props:any) => {
   const [value, setValue] = useState<number>(0);
 
   const handleChange = async(event: React.SyntheticEvent, newValue: number) => {
-      setValue(newValue)
+     newValue !== -1 &&  setValue(newValue);
+      console.log(newValue)
   };
 
 
     const renderItem = (array :NavBarItem[])=>{
        return array
         .map<JSX.Element>(
-            (element:NavBarItem,index:number)=><TabItem  key={index} 
-                                                         iconName={element.iconName}
-                                                         text={element.text}
+            (element:NavBarItem,index:number)=><RootTab  key={index} 
+                                                         {...element}
                                                          {...props}
                                                 />)
           

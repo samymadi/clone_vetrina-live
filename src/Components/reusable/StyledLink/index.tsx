@@ -1,6 +1,6 @@
 
 import {Link} from 'react-router-dom'
-import { Stack, Typography } from '@mui/material';
+import { Stack, Theme, Typography } from '@mui/material';
 import Icons from '../../Icons';
 
 
@@ -8,41 +8,35 @@ import Icons from '../../Icons';
 import { linkStyle,stackStyle } from './style';
 
 
-const StyledLink = ({title,...rest}:Props):JSX.Element => {
+import LinkContent from './LinkContent';
+import { SxProps } from '@mui/system';
 
-    return (
-        <Link 
-        {...rest} 
-        style={linkStyle} >   
-                <Stack 
-                direction='row' 
-                alignItems='center' 
-                sx={stackStyle}> 
 
-                            <Typography 
-                            color='info' 
-                            fontFamily='Source Sans Pro' 
-                            fontWeight={400} 
-                            mr='15px' 
-                            mb='5px'
-                            fontSize="17px">
-                                {title}
-                            </Typography>
-                            <Icons 
-                            iconName='rightArrow'   
-                            fontSize='18px' 
-                            color='#21B8F9'
-                            />     
-                </Stack>
-        </Link>
-    );
+const StyledLink = (props:Props):JSX.Element => {
+
+    const {title,externalLink,color,iconName,target,to,...rest} =props
+
+    return   externalLink ?  <a href={to} target={target} style={{textDecorationColor:color}}>
+                                    <LinkContent {...props}/>
+                             </a>
+                          :  <Link 
+                                    {...props} 
+                                    style={linkStyle}>   
+                                    <LinkContent {...props} />
+                             </Link>
+  
 }
 
 export default StyledLink;
 
 
-interface Props{
+export interface Props{
     to:string
     title:string
+    externalLink?:boolean
     target?:string
+    color?:string
+    iconName?:string
+    fontSize?:string
+    sx?:SxProps<Theme>
 }

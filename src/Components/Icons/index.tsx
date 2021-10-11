@@ -23,6 +23,8 @@ import helpCircle from '../../assets/Icon/help-circle.svg';
 import share2 from '../../assets/Icon/share-2.svg';
 import tool from '../../assets/Icon/tool.svg';
 import facebook from '../../assets/Icon/facebook.svg'
+import chevronDown from '../../assets/Icon/chevron-down.svg'
+import externalLink from '../../assets/Icon/external-link.svg'
 
 
 //Return Icons with the  icon name props
@@ -61,6 +63,8 @@ const Icon = (props:Props):JSX.Element => {
              case 'share-2' :setIcon( share2);break;
              case 'tool': setIcon(tool); break;
              case 'facebook': setIcon(facebook); break;
+             case 'chevron-down':setIcon(chevronDown); break;
+             case 'external-link' : setIcon(externalLink); break;
              default :return;
         }
     }        
