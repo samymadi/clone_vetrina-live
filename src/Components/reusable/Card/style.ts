@@ -16,9 +16,9 @@ export default createTheme(globalTheme,{
             styleOverrides:{
                 root: {
                     position:'relative',
-                    minHeight:'180px',
+                    minHeight:'120px',
                     minWidth:'250px',
-                    padding:"15px",
+                    padding:"20px 25px",
                     borderRadius:'8px',
                     boxShadow:'0px 4px 6px #dfdfdf',
                     margin:'0',
@@ -30,7 +30,7 @@ export default createTheme(globalTheme,{
                     root:{
                         padding:'0',
                         marginTop:'10px',
-                        marginBottom:'30px'
+                        
                     }
             }
             

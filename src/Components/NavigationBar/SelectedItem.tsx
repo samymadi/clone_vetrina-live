@@ -15,7 +15,7 @@ const SelectedItem = ({iconName,text}:NavBarItem) => {
                     >
                         <Icons 
                                 iconName={iconName} 
-                                fontSize='18px'/>
+                                fontSize='22px'/>
                         <Typography 
                                     color='primary' 
                                     sx={typographyStyle} 

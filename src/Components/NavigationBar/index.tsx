@@ -24,7 +24,7 @@ const NavigationBar = () => {
     return (
         <ThemeProvider theme={theme}>
                         <Drawer
-                            sx={styledDrawer(drawewIsOpen ? '220px' : "45px")}
+                            sx={styledDrawer(drawewIsOpen ? '220px' : "50px")}
                             variant="permanent"
                             anchor="left">
                                 <ContainerRoot>

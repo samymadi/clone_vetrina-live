@@ -21,7 +21,7 @@ const StyledLink = (props:Props):JSX.Element => {
                              </a>
                           :  <Link 
                                     {...props} 
-                                    style={linkStyle}>   
+                                    style={linkStyle(color)}>   
                                     <LinkContent {...props} />
                              </Link>
   

@@ -29,7 +29,7 @@ const LinkSwitch = ({title,color,iconName,fontSize,sx}:Props) => {
                         fontWeight={400} 
                         mr='15px' 
                         mb='5px'
-                        fontSize={fontSize ? fontSize : '15px' }
+                        fontSize={fontSize ? fontSize : '17px' }
                         sx={sx}>
                             {title}
                         </Typography>

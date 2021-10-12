@@ -11,18 +11,13 @@ const GridContainer = (props:Props) => {
     
     return (
             <Grid 
-                item {...rootGrid} 
+                item 
+                {...rootGrid} 
                 sx={{marginTop:'-80px'}}>   
                     <Grid 
                         container 
                         spacing={spacing}>
-                        
-                        {children.map((card,index:number)=>(
-                             <Grid 
-                                 item {...childrenGrid}>
-                                 {card}
-                             </Grid> 
-                        ))}
+                        {children}
                     </Grid>
             </Grid>
     );

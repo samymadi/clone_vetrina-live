@@ -9,11 +9,12 @@ import CompletedProgress from './CompletedProgress';
 const CardContent = () => {
     return (
         <Stack >
-                <CompletedProgress percentage={45} />
+                <CompletedProgress percentage={15} />
                 <Typography 
                         paragraph 
                         fontSize='15px' 
-                        color='primary'>
+                        color='primary'
+                        mb='40px'>
                             Complete all the steps to have a complete shop to best present to your customers. 
                 </Typography>
         </Stack>

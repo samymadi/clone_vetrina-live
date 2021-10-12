@@ -4,6 +4,6 @@
 
 
 export const textStyle ={
-    fontSize:'25px',
-    fontWeight:'500'
+    fontSize:'35px',
+    fontWeight:'600'
 }

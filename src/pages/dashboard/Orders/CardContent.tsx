@@ -9,7 +9,7 @@ import Item from './Item'
 
 const CardContent = () => {
     return (
-        <Stack mt='25px'>
+        <Stack mt='25px' mb='40px'>
                 <Item 
                     text='Orders received:' 
                     value='156' />

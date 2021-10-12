@@ -5,6 +5,7 @@ const CardContent = () => {
     return (
         <Typography 
             mt='30px' 
+            mb='40px'
             color='primary' 
             fontSize='42px' 
             fontWeight="500">

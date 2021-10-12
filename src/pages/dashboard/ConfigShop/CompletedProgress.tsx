@@ -32,7 +32,7 @@ const CompletedProgress = ({percentage}:Props) =>{
                         <Typography 
                             mb='20px' 
                             mt='-6px' 
-                            fontSize='14px'>
+                            fontSize='18px'>
                             Completed
                         </Typography>
                 </Typography>

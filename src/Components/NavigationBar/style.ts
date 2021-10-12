@@ -131,8 +131,8 @@ export const stackStyle = {
 
 
 export const typographyStyle:SxProps<Theme>={
-    marginLeft:'15px',
-    fontSize:'14px',
+    marginLeft:'20px',
+    fontSize:'16px',
     textTransform:'none'
 }
 

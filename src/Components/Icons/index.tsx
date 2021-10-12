@@ -9,6 +9,7 @@ import menu from '../../assets/Icon/menu.svg';
 import shoppingCart from '../../assets/Icon/shopping-cart.svg';
 import list from '../../assets/Icon/list.svg';
 import user from '../../assets/Icon/user.svg';
+import users from '../../assets/Icon/users.svg'
 import target from '../../assets/Icon/target.svg';
 import truck from '../../assets/Icon/truck.svg';
 import dollarSign from '../../assets/Icon/dollar-sign.svg';
@@ -25,6 +26,8 @@ import tool from '../../assets/Icon/tool.svg';
 import facebook from '../../assets/Icon/facebook.svg'
 import chevronDown from '../../assets/Icon/chevron-down.svg'
 import externalLink from '../../assets/Icon/external-link.svg'
+import headphones from '../../assets/Icon/headphones.svg'
+import fileText from '../../assets/Icon/file-text.svg'
 
 
 //Return Icons with the  icon name props
@@ -52,6 +55,7 @@ const Icon = (props:Props):JSX.Element => {
              case 'target' :setIcon(target);break;
              case 'truck' :setIcon(truck);break;
              case 'user' :setIcon(user);break;
+             case 'users' :setIcon(users);break;
              case 'dollar-sign' :setIcon(dollarSign);break;
              case 'brush' :setIcon(brush);break;
              case 'credit-card' :setIcon(creditCard);break;
@@ -65,6 +69,8 @@ const Icon = (props:Props):JSX.Element => {
              case 'facebook': setIcon(facebook); break;
              case 'chevron-down':setIcon(chevronDown); break;
              case 'external-link' : setIcon(externalLink); break;
+             case 'headphones' : setIcon(headphones); break;
+             case 'file-text' : setIcon(fileText); break;
              default :return;
         }
     }        

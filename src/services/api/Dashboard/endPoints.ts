@@ -1,0 +1,1 @@
+export const Blog_EndPoint = ():string=> '/api/blog-posts'
