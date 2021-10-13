@@ -5,6 +5,11 @@ import {styled } from "@mui/system";
 
 
 
+const scrollBarStyle = {
+    '::-webkit-scrollbar':{width:'4px'},
+    '::-webkit-scrollbar-thumb':{backgroundColor:'#999999',borderRadius:'8px'}
+}
+
 
 
 
@@ -31,5 +36,6 @@ export const MainRouteContainer = styled(Stack)(()=>({
              top:'64px',
              left:'0',
              right:'0',
-             position:'absolute'   
+             position:'absolute',
+             ...scrollBarStyle   
 }))

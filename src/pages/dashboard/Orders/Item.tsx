@@ -23,7 +23,7 @@ const Item = ({text,value,valuePrefix}:Props) => {
             <Typography 
                 color='primary'
                 sx={valueStyle}>
-                    {` ${valuePrefix ||""} ${value}`}
+                {valuePrefix} {value}
             </Typography>
         </Stack>
     );
@@ -35,6 +35,6 @@ export default memo(Item);
 
 interface Props{
         text:string
-        value:string | number
+        value:string| number |JSX.Element
         valuePrefix?:string
 }

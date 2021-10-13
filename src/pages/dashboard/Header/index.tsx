@@ -22,11 +22,10 @@ const Header = () => {
                             externalLink
                             target='_blank'  
                             color='#fff'
-                            iconName='external-link'
-                            fontSize='17px'  
+                            iconName='external-link'  
                             title='app.vetrinalive.com/samshop' 
                             to="https://app.vetrinalive.com/samshop"
-                            sx={{fontWeight:'500'}} />
+                            sx={{fontWeight:'600',fontSize:'20px'}} />
                       
                           
         </Root>

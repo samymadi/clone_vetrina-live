@@ -29,7 +29,9 @@ const Index = ():JSX.Element => {
 
 
     return (
-        <Card title='Latest news' icon='file-text' headerAction={<HeaderActions/>} >
+        <Card title='Latest news' 
+              icon='file-text' 
+              headerAction={<HeaderActions/>} >
             <BlogContent blogs={blogs}/>
         </Card>
     );

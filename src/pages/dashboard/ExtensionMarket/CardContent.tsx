@@ -31,7 +31,9 @@ const responsive = {
   };
 
 
-const CardContent = () => {
+const CardContent = ({extensions}:Props) => {
+
+    const isEmpty = extensions.length === 0;
     return (
         <Carousel 
                 containerClass={style.container} 
@@ -41,13 +43,21 @@ const CardContent = () => {
                 arrows={false} 
                 centerMode 
                 minimumTouchDrag={100}>
-                    <ExtensionContainer/>
-                    <ExtensionContainer/>
-                    <ExtensionContainer/>
-                    <ExtensionContainer/>
-                    <ExtensionContainer/>
+
+                  {!isEmpty &&
+                      extensions.map((exte:any)=> 
+                          <ExtensionContainer 
+                                extension={exte} 
+                                key={exte.id}/>)
+                  }
+                  
         </Carousel>
     );
 }
 
 export default memo(CardContent);
+
+
+interface Props{
+  extensions:any
+}

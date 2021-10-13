@@ -23,7 +23,7 @@ const ExtendItem = ({children,subItems}:Props):JSX.Element => {
             <AccordionSummary 
                     expandIcon={<Icons 
                                     iconName='chevron-down' 
-                                    fontSize='16px' />}
+                                    fontSize='20px' />}
                     sx={accordionSummaryStyle}>
     
             {children}

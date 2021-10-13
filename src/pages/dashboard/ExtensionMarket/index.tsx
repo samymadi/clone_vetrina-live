@@ -1,15 +1,37 @@
-import {memo} from 'react';
+import {memo,useEffect,useState} from 'react';
 
 //componet 
 import { Card } from 'src/components/reusable';
 import CardContent from './CardContent';
 import Actions from './Actions';
 
+//apiCalls
+
+import { getExtensions } from 'src/services/api/Dashboard/apiCall';
+import { ToExtensionsArray } from 'src/Helpers/structureDate';
 
 
 
 
-const index = () => {
+
+const Index = () => {
+
+    const [extensions,setExtensions] = useState<any>([]);
+    
+    console.log(extensions);
+
+    useEffect(()=>{
+        getExtensionData();
+    },[])
+
+
+    const getExtensionData = async()=>{
+           const result = await getExtensions();
+            if(result.error) console.log(result.error);
+                else setExtensions(ToExtensionsArray(result.data));
+                
+    }
+
 
     return (
         <Card 
@@ -17,9 +39,9 @@ const index = () => {
             icon='new app' 
             actions={<Actions/>}
             >
-                <CardContent/>
+                <CardContent extensions={extensions}/>
        </Card>
     );
 }
 
-export default memo(index);
+export default memo(Index);

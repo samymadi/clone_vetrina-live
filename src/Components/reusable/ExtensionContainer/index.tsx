@@ -7,10 +7,12 @@ import { Card,CardMedia,Typography,Box } from '@mui/material';
 //style 
 import {boxChildStyle,boxRootStyle,linkStyle,imgStyle} from './style'
 
-const index = () => {
-    return (
-      
+const index = ({extension}:Props) => {
 
+    const {title,logo_url} =extension;    
+    
+    
+    return (
              <a 
                 href="/" 
                 tabIndex={-1} 
@@ -19,12 +21,12 @@ const index = () => {
                         sx={boxRootStyle}>
                             <img 
                                     style={imgStyle}  
-                                    src='https://vetrinalive-prod.s3.eu-south-1.amazonaws.com/store-features/G0fqmm0JWYo3m4w5pdER3d31juVW8YFWh0vnICgb.png' />
+                                    src={logo_url} />
                             
                             <Box sx={boxChildStyle}/>
                     </Box>            
                 <Typography color='primary'>
-                    Compn
+                    {title}
                 </Typography>    
                       
             </a>
@@ -32,3 +34,7 @@ const index = () => {
 }
 
 export default memo(index);
+
+interface Props{
+    extension:any
+}

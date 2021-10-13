@@ -6,7 +6,7 @@ import globalTheme from "../../../Styles/GlobalTheme";
 
 
 
-export const GridRoot = styled(Grid)(({theme})=>({
-            
-    
-}))
+export const gridStyle = {
+    padding:'10px 5% 30px 5%',
+    backgroundColor:'#f7f7f7'
+}

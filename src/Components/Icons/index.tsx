@@ -28,12 +28,13 @@ import chevronDown from '../../assets/Icon/chevron-down.svg'
 import externalLink from '../../assets/Icon/external-link.svg'
 import headphones from '../../assets/Icon/headphones.svg'
 import fileText from '../../assets/Icon/file-text.svg'
+import { CSSProperties } from '@emotion/serialize';
 
 
 //Return Icons with the  icon name props
 const Icon = (props:Props):JSX.Element => {
     
-    const {iconName,fontSize,...rest} = props;
+    const {iconName,fontSize,style,...rest} = props;
     const [icon,setIcon] = useState<string>('');
 
     
@@ -86,4 +87,5 @@ interface Props{
     iconName:string
     color?:string
     fontSize?:string | undefined
+    style?:CSSProperties
 }

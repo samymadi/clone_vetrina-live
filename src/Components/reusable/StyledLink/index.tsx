@@ -16,8 +16,12 @@ const StyledLink = (props:Props):JSX.Element => {
 
     const {title,externalLink,color,iconName,target,to,...rest} =props
 
-    return   externalLink ?  <a href={to} target={target} style={{textDecorationColor:color}}>
-                                    <LinkContent {...props}/>
+    return   externalLink ?  <a 
+                                    href={to} 
+                                    target={target} 
+                                    style={{textDecorationColor:color,fontSize:rest.fontSize}}>
+                                        
+                                        <LinkContent {...props}/>
                              </a>
                           :  <Link 
                                     {...props} 

@@ -12,6 +12,7 @@ const HeaderActions = () =><StyledLink
                                 externalLink 
                                 to='https://vetrinalive.com/blog' 
                                 title='visite our blog'
+                                color='#21B8F9'
                                 iconName='external-link'  />
    
 

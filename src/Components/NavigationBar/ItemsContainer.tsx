@@ -15,13 +15,14 @@ const ItemsContainer = (props:any) => {
 
 
 
+    //useState
+    const [value, setValue] = useState<number>(0);
 
-  const [value, setValue] = useState<number>(0);
-
-  const handleChange = async(event: React.SyntheticEvent, newValue: number) => {
-     newValue !== -1 &&  setValue(newValue);
-      console.log(newValue)
-  };
+    
+    //eventListener
+    const handleChange = async(event: React.SyntheticEvent, newValue: number) => {  
+         newValue !== -1 &&  setValue(newValue);
+    }
 
 
     const renderItem = (array :NavBarItem[])=>{

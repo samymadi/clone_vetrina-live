@@ -6,13 +6,9 @@ import globalTheme from "src/Styles/GlobalTheme"
 
 
 const scrollBarStyle = {
-    '::-webkit-scrollbar':{width:'2px',display:'none'},
+    '::-webkit-scrollbar':{width:'3px'},
     '::-webkit-scrollbar-thumb':{backgroundColor:'#999999',borderRadius:'8px'}
 }
-
-
-
-
 
 
 export default createTheme(globalTheme,{
@@ -71,7 +67,7 @@ export const  styledDrawer = (width:string):SxProps<Theme>=>{
                 boxSizing: 'border-box',
                 backgroundColor:'transparent',
                 transition:'inherit',
-                paddingRight:'3px'
+                // paddingRight:'3px'
              }
     }
 }
@@ -142,14 +138,16 @@ export const typographyStyle:SxProps<Theme>={
 
 export const accordionDetailsStyle={
     backgroundColor:'#E9F8FE',
-    padding:'0'
+    padding:'0',
+    
 }        
 
 export const accordionSummaryStyle={
             minHeight:'32px !important',
             height:'32px',
             padding:'0',
-            maxHeight:'32px'
+            maxHeight:'32px',
+            paddingRight:'10px'
 }
 export const accordionStyle={
             boxShadow:'none',

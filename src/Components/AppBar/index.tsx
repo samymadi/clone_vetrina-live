@@ -1,26 +1,64 @@
-import { AppBar as AppB,Button,Typography,Toolbar,Badge} from "@mui/material";
+import {useState} from 'react';
 
+
+import { 
+        AppBar as AppB,
+        Button,
+        Typography,
+        Toolbar,
+        Badge} from "@mui/material";
+
+
+import DrawerNews from "./DrawerNews";        
+import Icons from "../Icons";        
+
+//style
+import {appBarStyle,buttonStyle,toolbarStyle} from './style'
 
 const AppBar = () => {
+
+    
+    const [isOpen,setIsOpen] = useState<boolean>(false);
+
+    const toggleDrawer=()=>{
+          setIsOpen(false);
+    }
+
+    const handleOpenDrawer = ()=>{
+        setIsOpen(true)
+    }
     return (
-                    <AppB position="static" sx={{boxShadow:'none',borderBottom:'1px solid lightgrey'}} >
-                        <Toolbar sx={{display:'flex',justifyContent:'space-between',alignItems:'center',backgroundColor:'white',minHeight:'64px !important'}}>
-                              <>
-                                <Typography
-                                    color='primary'
-                                    fontWeight='600'
-                                    fontSize='18px'
-                                 
-                                    >Dashboard
-                                </Typography>
-                                <Badge badgeContent={1} color="info">
-                                    <Button >
-                                        What's new 
-                                    </Button>
-                                </Badge>
-                            </>   
-                        </Toolbar>           
-                    </AppB>
+        <>
+                <DrawerNews 
+                    isOpen={isOpen} 
+                    toggleDrawer={toggleDrawer}/>
+                    
+                <AppB 
+                    position="static" 
+                    sx={appBarStyle} >
+                    <Toolbar sx={toolbarStyle}>
+                            <>
+                            <Typography
+                                color='primary'
+                                fontWeight='600'
+                                fontSize='18px'>
+                                    Dashboard
+                            </Typography>
+                            <Badge 
+                                badgeContent={1} 
+                                color="info" >
+                                <Button
+                                    onClick={handleOpenDrawer}
+                                    startIcon={<Icons iconName='zap'/>}
+                                    disableRipple 
+                                    sx={buttonStyle} >
+                                    What's new 
+                                </Button>
+                            </Badge>
+                        </>   
+                    </Toolbar>           
+                </AppB>
+        </>
     );
 }
 
