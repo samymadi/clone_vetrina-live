@@ -1,0 +1,13 @@
+.container{
+    width: fit-content;
+    color: inherit;
+}
+
+.container path {
+    fill: currentColor;
+}
+.container path[stroke]{
+    fill: none;
+    stroke: currentColor;
+} 
+

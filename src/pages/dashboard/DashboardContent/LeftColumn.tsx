@@ -6,6 +6,7 @@ import {Grid, GridSize} from '@mui/material'
 import GridContainer from './GridContainer';
 import Visitors from "../Visitors";
 import Orders from "../Orders";
+import PeriodChange,{PeriodeFunction} from './PeriodChange';
 import ExtensionMarketplace from '../ExtensionMarket/index';
 import MobileAppAd from "../ExternContent/MobileAppAd";
 import Blog from "../Blog";
@@ -28,21 +29,6 @@ const LeftColumn = () => {
             getShopDetails();
     },[])
 
-    
-    const handleChange = (setPeriodView:any,value:number)=>{
-        switch (value) {
-            case 0: setPeriodView('day'); break;
-            case 1: setPeriodView('week'); break;
-            case 2: setPeriodView('month'); break;        
-            default:
-                break;
-        }
-    }
-
-
-
-
-
     const getShopDetails= async()=>{
             const result = await getShopInfo();
             if(result.error) console.log(result.error);
@@ -61,21 +47,23 @@ const LeftColumn = () => {
 
 
     return (
-        <GridContainer
-                                rootGrid={{ xs: 12, md: 8, sm: 12 }} 
-                                childrenGrid={{xs: 12, md: 6, sm: 12}} 
-                                spacing={3}>
-                                    
+        <GridContainer  rootGrid={{ xs: 12, md: 8, sm: 12 }} 
+                        spacing={3}>
+                                <Grid item {...breakpoints} >
+                                        <PeriodChange>
+                                                { (p:PeriodeFunction):JSX.Element=> <Visitors   views={shopInfoVisitors} 
+                                                                                                isLoading={isLoading}
+                                                                                                p={p}/>      
+                                                }
+                                        </PeriodChange> 
+                                </Grid>
                                   <Grid item {...breakpoints} >
-                                        <Visitors 
-                                                views={shopInfoVisitors} 
-                                                isLoading={isLoading}
-                                                handleChange={handleChange}/>   
-                                  </Grid>
-                                  <Grid item {...breakpoints} >
-                                        <Orders orders={shopInfoOrders} 
-                                                isLoading={isLoading} 
-                                                handleChange={handleChange}/> 
+                                        <PeriodChange>
+                                                { (p:PeriodeFunction):JSX.Element=>  <Orders orders={shopInfoOrders} 
+                                                                                             isLoading={isLoading} 
+                                                                                             p={p}/>   
+                                                }
+                                        </PeriodChange> 
                                   </Grid>
                                   <Grid item {...breakpoints} >
                                         <MobileAppAd />   
@@ -87,8 +75,11 @@ const LeftColumn = () => {
                                         <Blog />   
                                   </Grid>
 
-                        </GridContainer>
+        </GridContainer>
     );
 }
 
 export default LeftColumn;
+
+
+

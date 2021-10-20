@@ -2,11 +2,10 @@ import {memo} from 'react';
 
 
 //material ui
-import { Grid,CardMedia,Typography } from '@mui/material';
+import { Grid,Typography } from '@mui/material';
 
 //component
-import AdCard from 'src/components/reusable/AdCard';
-import { StyledLink } from 'src/components/reusable';
+import {AdCard,CustomRedirectionButton,Link} from 'src/components/reusable';
 
 
 //style
@@ -14,7 +13,7 @@ import { addCardStyle } from './style';
 
 
 //assets
-import {ReactComponent as PhoneImage} from '../../../../assets/Images/Device=iPhone 12.svg';
+import  PhoneImage from '../../../../assets/Images/Device=iPhone 12.svg';
 import  AndroidAppleStore from '../../../../assets/Images/AndroidAppleStore.png';
 
 const index = () => {
@@ -30,13 +29,17 @@ const index = () => {
                                 Sell your products on your exclusive 
                                 APP published on the stores 
                             </Typography>
-                            <StyledLink 
-                                title='Show more' 
-                                to='/show_more' 
-                                color='#fff'/>  
+
+                            <Link external 
+                                  target='_blank'  
+                                  to='https://www.apple.com'>
+                                        <CustomRedirectionButton color='#fff'>
+                                                            Show more
+                                        </CustomRedirectionButton>
+                            </Link> 
                     </Grid>
                     <Grid item md={5}>
-                            <PhoneImage/>
+                            <img src={PhoneImage}/>
                     </Grid>
                     <Grid 
                         item 

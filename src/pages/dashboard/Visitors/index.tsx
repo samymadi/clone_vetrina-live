@@ -6,21 +6,12 @@ import Card from '../../../components/reusable/Card/index';
 import Actions from './Actions';
 import CardContent from './CardContent';
 import StyledSelect from 'src/components/reusable/StyledSelect';
+import {PeriodeFunction} from '../DashboardContent/PeriodChange';
 
 
-const Visitors = ({views,isLoading,handleChange}:Props) => {
+const Visitors = ({views,isLoading,p}:Props) => {
 
-    const [value,setValue] = useState<number>(0);
-    const [periodeView,setPeriodView] = useState<string>('day')
-     console.log(value,views);
-
-
-
-    useEffect(()=>{
-            handleChange(setPeriodView,value);
-    },[value]) 
-
-
+    const {value,setValue,periodeView} = p
     return (
         <Card 
             icon='eye' 
@@ -42,5 +33,5 @@ export default memo(Visitors);
 interface Props {
     views:any
     isLoading:boolean
-    handleChange:any
+    p:PeriodeFunction
 }

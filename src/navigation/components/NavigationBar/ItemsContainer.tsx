@@ -4,8 +4,8 @@ import { useState } from 'react';
 import RootTab from './RootTab';
 import { Divider,Tabs,Tab,Accordion,AccordionSummary,AccordionDetails,CssBaseline ,Typography} from '@mui/material';
 //static Data
-import { navBarItem,navBarItem2,NavBarItem } from '../../assets/static/staticData';
-import Icons from '../Icons';
+import { navBarItem,navBarItem2,NavBarItem } from '../../../assets/static/staticData';
+import Icons from '../../../components/Icons';
 
 
 

@@ -26,7 +26,7 @@ const index = (props:Props):JSX.Element => {
         <ThemeProvider theme={theme}>
             <Card>
                 <Header {...rest}>
-                    
+
                 </Header>
 
                 <CardContent>

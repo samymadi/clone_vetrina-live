@@ -1,7 +1,18 @@
-import {CardMedia,IconButton,Stack } from "@mui/material";
+//system imports 
 import {Link} from 'react-router-dom';
-import Icons from "../Icons";
-import Logo from '../../assets/Logo/logo.svg';
+
+
+//third party imports 
+import {CardMedia,IconButton,Stack } from "@mui/material";
+
+
+//custom components imports
+import Icons from "../../../components/Icons";
+
+
+//assets imports 
+import Logo from '../../../assets/Logo/logo.svg';
+
 
 
 const Header = ({setDrawerIsOpen}:Props) => {
@@ -19,8 +30,8 @@ const Header = ({setDrawerIsOpen}:Props) => {
             justifyContent='space-between'
             mb="20px"
             mt='7px'
-            ml='5px'
-            pr='10px'>
+            ml='10px'
+            pr='5px'>
                 <Link to='/'>
                         <CardMedia 
                             component='img' 

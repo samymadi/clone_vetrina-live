@@ -13,7 +13,6 @@ const RightColumn = () => {
     return (
         <GridContainer 
                 rootGrid={{ xs: 12, md: 4, sm: 12 }} 
-                childrenGrid={{xs: 12, md: 12, sm: 12}} 
                 spacing={3}>
                     <Grid item xs={12} md={12} sm={12}>
                             <ConfigShop/>

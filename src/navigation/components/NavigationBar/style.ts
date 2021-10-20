@@ -1,6 +1,6 @@
 //Types
-import { SxProps, Theme, styled } from "@mui/system"
-import { createTheme,TextField } from "@mui/material"
+import { SxProps, Theme, styled, height } from "@mui/system"
+import { createTheme } from "@mui/material"
 import globalTheme from "src/Styles/GlobalTheme"
 
 
@@ -30,19 +30,7 @@ export default createTheme(globalTheme,{
             }
         },
 
-        MuiTab:{
-            styleOverrides:{
-                    root:{
-                        '&selected':{
-                            backgroundColor:'red'
-                        },
-                        selected:{
-                            backgroundColor:'red'
-
-                        }
-                    },
-            }
-        }
+       
     }
 })
 
@@ -58,7 +46,7 @@ export const  styledDrawer = (width:string):SxProps<Theme>=>{
     
     return { 
              position:'relative',
-             transition:'width 300ms ease-in',
+             transition:'width 300ms ease',
              width,
              flexShrink: 0,
              
@@ -80,8 +68,15 @@ export const ContainerRoot = styled('div')(()=>({
     height:'100%',
     overflowY:'scroll',
     overflowX:'hidden',
-    '.Mui-selected':{backgroundColor:'#f2f2f2',borderRadius:'3px','& p':{color:'#21B8F9'}},
-
+    '.Mui-selected':{backgroundColor:'#f2f2f2',borderRadius:'3px',color:'red !important','& h6':{color:'#21B8F9'},"& svg":{color:'#21B8F9 !important'}},
+    '.MuiTab-root:hover':{
+        "& svg":{
+            color:'#21B8F9 !important'
+        },
+        "& h6":{
+            color:"#21B8F9 !important"
+        }
+    },
     
     ...scrollBarStyle,
 }))   
@@ -100,6 +95,7 @@ export const tabStyle = {
     padding:'5px 0',
     marginLeft:'7px',
     minHeight:"32px",
+    marginBottom:'3px'
 }
 
 
@@ -119,7 +115,7 @@ export const linkStyle= {
 
 export const stackStyle = {
     minHeight:"20px",
-    height:"20px",
+    height:"35px",
     width:'100%',
     borderLeft:'3px solid transparent',
     paddingLeft:'5px'
@@ -129,6 +125,7 @@ export const stackStyle = {
 export const typographyStyle:SxProps<Theme>={
     marginLeft:'20px',
     fontSize:'16px',
+    fontWeight:"400",
     textTransform:'none'
 }
 
@@ -144,14 +141,15 @@ export const accordionDetailsStyle={
 
 export const accordionSummaryStyle={
             minHeight:'32px !important',
-            height:'32px',
+            height:'35px',
             padding:'0',
-            maxHeight:'32px',
+            maxHeight:'35px',
             paddingRight:'10px'
 }
 export const accordionStyle={
             boxShadow:'none',
-            width:'100%'
+            width:'100%',
+           
 }
 
 

@@ -7,7 +7,7 @@ import {Grid} from '@mui/material';
 const GridContainer = (props:Props) => {
 
 
-    const {rootGrid,childrenGrid,spacing,children} = props
+    const {rootGrid,spacing,children} = props
     
     return (
             <Grid 
@@ -28,7 +28,6 @@ export default memo(GridContainer);
 
 interface Props{
         rootGrid:BreakPoints
-        childrenGrid:BreakPoints
         spacing:string | number
         children:JSX.Element[]
 }

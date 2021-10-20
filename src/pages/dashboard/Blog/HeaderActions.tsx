@@ -5,15 +5,17 @@ import {memo} from 'react';
 //components
 
 
-import { StyledLink } from 'src/components/reusable';
+import { RedirectionButton,Link,CustomSvg } from 'src/components/reusable';
+import {ReactComponent as ExternalLink} from '../../../assets/Icon/external-link.svg'; 
 
 
-const HeaderActions = () =><StyledLink 
-                                externalLink 
-                                to='https://vetrinalive.com/blog' 
-                                title='visite our blog'
-                                color='#21B8F9'
-                                iconName='external-link'  />
+const HeaderActions = () => <Link   external
+                                    target='_blank'
+                                    to='https://vetrinalive.com/blog'>
+                                    <RedirectionButton icon={<CustomSvg icon={<ExternalLink />} color='#21B8F9'/>}>
+                                            Visit our blog
+                                    </RedirectionButton>        
+                            </Link>  
    
 
 export default memo(HeaderActions);

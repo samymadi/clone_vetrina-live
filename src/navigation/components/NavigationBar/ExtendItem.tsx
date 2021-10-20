@@ -1,15 +1,19 @@
+//system imports 
 import {memo} from 'react'
+
+//third party imports 
 import {
         Accordion,
         AccordionDetails,
         AccordionSummary,List} from '@mui/material'
 
-import Icons from '../Icons';
 
+//custom components imports        
+import Icons from '../../../components/Icons';
 import SubTitles from './SubTitles';
 
 
-//style 
+//style imports
 import {accordionStyle,
         accordionSummaryStyle,
         accordionDetailsStyle,

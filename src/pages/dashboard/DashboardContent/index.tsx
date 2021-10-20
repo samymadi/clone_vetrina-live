@@ -6,6 +6,8 @@ import { Grid} from "@mui/material";
 import RightColumn from "./RightColumn";
 import LeftColumn from "./LeftColumn";
 
+//style
+
 
 const DashBoardContent = () => {
 

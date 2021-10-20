@@ -1,10 +1,9 @@
 
 //Component
-import StyledLink from "../../../components/reusable/StyledLink";
+import {CustomRedirectionButton} from "../../../components/reusable";
 
-const Actions = () =><StyledLink 
-                            title='Do you want more visits? Contact us !' 
-                            to="/dashboard"
-                            />
+const Actions = () =>       <CustomRedirectionButton>
+                                    Do you want more visits? Contact us !
+                            </CustomRedirectionButton>
 
 export default Actions;

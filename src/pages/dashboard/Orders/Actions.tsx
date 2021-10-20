@@ -1,17 +1,12 @@
 import {memo} from 'react';
-import StyledLink from '../../../components/reusable/StyledLink';
+import {Link,CustomRedirectionButton} from '../../../components/reusable';
 
 //Component 
-const Actions = () => {
-    return (
-        <StyledLink 
-            title='10 free tips to increase your sales' 
-            to='/categories' 
-            target='_blank'
-        />
-            
-       
-    );
-}
+const Actions = () =>   <Link to='/categories'>
+                            <CustomRedirectionButton>
+                                    10 free tips to increase your sales
+                            </CustomRedirectionButton>        
+                        </Link>             
+
 
 export default memo(Actions);

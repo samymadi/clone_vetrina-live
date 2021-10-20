@@ -1,11 +1,12 @@
-import { Drawer,ThemeProvider} from "@mui/material";
+//system imports 
 import { useState,createContext} from "react";
 
 
+//third party imports 
+import { Drawer,ThemeProvider} from "@mui/material";
 
 
-
-//Components
+//custom Components imports 
 import theme,{ContainerRoot} from "./style";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -13,7 +14,7 @@ import ItemsContainer from "./ItemsContainer";
 
 
 
-//style 
+//style imports 
 import {styledDrawer} from './style';
 
 
@@ -26,7 +27,7 @@ const NavigationBar = () => {
         <ThemeProvider theme={theme}>
                    {/* <NavBarContext.Provider value={drawewIsOpen} > */}
                             <Drawer
-                                sx={styledDrawer(drawewIsOpen ? '250px' : "50px")}
+                                sx={styledDrawer(drawewIsOpen ? '250px' : "55px")}
                                 variant="permanent"
                                 anchor="left">
                                     <ContainerRoot>

@@ -1,23 +1,16 @@
 import {memo,useEffect,useState} from 'react';
 
-//Componet
+//Componets
 import Card from '../../../components/reusable/Card/index';
 import Actions from './Actions';
 import CardContent from './CardContent';
 
 import StyledSelect from 'src/components/reusable/StyledSelect';
+import { PeriodeFunction } from '../DashboardContent/PeriodChange';
 
-const Orders = ({orders,isLoading,handleChange}:any) => {
+const Orders = ({orders,isLoading,p}:any) => {
 
-    const [value,setValue] = useState<number>(0);
-    const [periodeView,setPeriodView] = useState<string>('day')
-
-    console.log(orders);
-    useEffect(()=>{
-            handleChange(setPeriodView,value);
-    },[value])
-
-
+    const {value,setValue,periodeView} = p
    
     return (
         <Card 
@@ -38,6 +31,6 @@ export default memo(Orders);
 interface Props{
     orders:any
     isLoading:boolean
-    handleChange:any
+    p:PeriodeFunction    
 }
 

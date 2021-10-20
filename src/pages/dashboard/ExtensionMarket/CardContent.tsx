@@ -1,13 +1,16 @@
+// system imports 
 import {memo} from 'react';
 
-//Carousel
+
+//third party imports 
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
-//component 
+//custom components imports 
 import { ExtensionContainer } from 'src/components/reusable';
 
-//css module
+
+//css imports 
 import style from './style.module.css';
 
 
@@ -34,6 +37,7 @@ const responsive = {
 const CardContent = ({extensions}:Props) => {
 
     const isEmpty = extensions.length === 0;
+    
     return (
         <Carousel 
                 containerClass={style.container} 

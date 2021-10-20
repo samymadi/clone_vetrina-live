@@ -14,6 +14,8 @@ import {
         typoTitleStyle,
         typoReadTimeleStyle } from './style';
 
+import { Link } from 'src/components/reusable';
+
 const BlogItem = ({blog}:Props) => {
     const {category,title,read_time,link,image_url}= blog
 
@@ -24,10 +26,10 @@ const BlogItem = ({blog}:Props) => {
             sm={6}
             sx={itemStyle} 
             >
-             <a 
-                href={link}
-                target='_blank' 
-                style={{color:'unset',textDecoration:'none'}}>
+             <Link 
+                external
+                to={link}
+                target='_blank'>
                 <Grid 
                     container 
                     spacing={2}>
@@ -60,7 +62,7 @@ const BlogItem = ({blog}:Props) => {
                                 </Typography>   
                         </Grid>
                 </Grid>
-            </a> 
+            </Link> 
         </Grid>
     );
 }

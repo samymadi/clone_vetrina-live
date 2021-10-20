@@ -1,26 +1,26 @@
 
-import { Card,CardHeader,CardContent,CardActions } from '@mui/material';
+import {CardContent,CardActions } from '@mui/material';
 import {memo} from 'react';
 
-
 //components 
-import { StyledLink } from 'src/components/reusable';
+import { CustomRedirectionButton,Link } from 'src/components/reusable';
 import AdCard from 'src/components/reusable/AdCard';
 
+//material
 import { Typography } from '@mui/material';
 
 //assets
-import {ReactComponent  as Logo} from '../../../../assets/Logo/logo-white-trustpilot 1.svg';
-
+import  Logo from '../../../../assets/Logo/logo-white-trustpilot 1.svg';
 // style
 
 import { cardStyle,greenColor } from './style'; 
 
+const color:string='#00C48C';
 const index = () => {
     return (
         <AdCard sx={cardStyle}>
                     
-                        <Logo/>
+                        <img src={Logo}/>
                     <CardContent>
                         <Typography color='#fff'>
                                 Show us your love by leaving
@@ -30,13 +30,13 @@ const index = () => {
                         </Typography>
                     </CardContent>
                     <CardActions>
-                        <StyledLink 
-                                externalLink 
-                                to='https://www.trustpilot.com/evaluate/vetrinalive.it' 
-                                title='Write a review on Trustpilot'    
-                                color={greenColor}
-                                target='_blank'
-                                />
+                        <Link external 
+                              target='_blank'  
+                              to='https://www.trustpilot.com/evaluate/vetrinalive.it'>
+                                <CustomRedirectionButton color={color}>
+                                            Write a review on Trustpilot
+                                </CustomRedirectionButton>
+                        </Link>        
                     </CardActions>
         </AdCard>
     );

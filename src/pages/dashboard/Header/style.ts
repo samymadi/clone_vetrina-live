@@ -15,3 +15,9 @@ export const Root = styled(Stack)(({theme})=>({
                 marginTop:'-70px'
         }
 }))
+
+
+export const redirectionStyleButton = {
+        fontWeight:'600',
+        fontSize:'20px'
+}

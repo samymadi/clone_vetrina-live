@@ -1,9 +1,13 @@
 import {memo} from 'react';
-import StyledLink from '../../../components/reusable/StyledLink/index'
+import {CustomRedirectionButton,Link,CustomSvg} from '../../../components/reusable'
 
-const Actions = () => <StyledLink 
-                            title='Complete the setup' 
-                            to="/setup"
-                            />
+import {ReactComponent as RightArrow } from '../../../assets/Icon/arrow-right.svg';
+
+const Actions = () => <Link to='/wizard'>
+                              
+                                <CustomRedirectionButton>
+                                                        Complete the setup
+                                </CustomRedirectionButton>
+                      </Link>
 
 export default memo(Actions);
